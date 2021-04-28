@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tuxedo Cat Coffee</title>
+    <link type="text/css" rel="stylesheet" href="cafe.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Tuxedo Cat Coffee"/>
+    </header>
+    <main>
+        <form id="order_form" name="order_form" action="checkout.html" method="get">
+            <section id="menu">
+            	<h2>Menu</h2>
+            	<p>Click an item to add it to your order.</p>
+				<div class="imgBox"></div>
+            	<ul>
+            		<li><a href="#"><img id="images/espresso_info.jpg" src="images/espresso.jpg" alt="espresso" onmouseover="hover(this,this.id);" onmouseout="unhover(this);" onclick="add(this)"/></a></li>
+            		<li><a href="#"><img id="images/latte_info.jpg" src="images/latte.jpg" alt="latte" onmouseover="hover(this,this.id);" onmouseout="unhover(this);" onclick="add(this)"/></a></li>
+            		<li><a href="#"><img id="images/cappuccino_info.jpg" src="images/cappuccino.jpg" alt="cappuccino" onmouseover="hover(this,this.id);" onmouseout="unhover(this);" onclick="add(this)"/></a></li>
+            		<li><a href="#"><img id="images/coffee_info.jpg" src="images/coffee.jpg" alt="coffee" onmouseover="hover(this,this.id);" onmouseout="unhover(this);" onclick="add(this)"/></a></li>
+            		<li><a href="#"><img id="images/biscotti_info.jpg" src="images/biscotti.jpg" alt="biscotti" onmouseover="hover(this,this.id);" onmouseout="unhover(this);" onclick="add(this)"/></a></li>
+            		<li><a href="#"><img id="images/scone_info.jpg" src="images/scone.jpg" alt="scone" onmouseover="hover(this,this.id);" onmouseout="unhover(this);" onclick="add(this)"/></a></li>
+            	</ul>
+            </section>
+
+            <section>
+            	<h2>Your Order</h2>
+            	<section>
+            		<select id="order" name="order" size="6">
+						
+            		</select>
+            		<p id="total">&nbsp;</p>            		
+           		</section>
+            	<section id="buttons">
+           			<a href="./checkout.html"><input type="button" name="place_order" id="place_order" value="Place Order"></a>
+           			<input type="button" name="clear_order" id="clear_order" value="Clear Order" onclick="clr();">				            		
+            	</section>
+            </section>   
+        </form>
+    </main> 
+	<script>
+		var val;
+		function hover(element,url) {
+			val=element.src;
+			element.setAttribute('src', url);
+		  }
+		  
+		  function unhover(element) {
+			element.setAttribute('src',val);
+		  }
+		  var total=0;
+		  var otext="";
+		  function add(ele){
+			  item=ele.alt;
+			  itemprice={"espresso":1.95,"latte":2.95,"cappuccino":3.45,"coffee":1.75,"biscotti":1.95,"scone":2.95}
+			  price=itemprice[item];
+			  total+=price;
+			  console.log(total);
+			  otext+="<option>$"+price+" - "+item+"</option>";
+			  console.log(otext);
+			  ele=document.getElementById("order").innerHTML=otext;
+			  console.log(ele);
+			  document.getElementById("total").innerHTML="Total: $"+total;
+		  }
+
+		  function clr(){
+			console.log("clr");
+			document.getElementById("order").innerHTML="";
+			  document.getElementById("total").innerHTML="";
+		  }
+	</script>
+</body>
+</html>
