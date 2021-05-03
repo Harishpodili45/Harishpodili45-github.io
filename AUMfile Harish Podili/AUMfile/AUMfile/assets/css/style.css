@@ -1,0 +1,167 @@
+.nav {
+    background-color: black;
+    color:white;
+    overflow: hidden;
+    width: 100%;
+}
+header{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)!important; 
+}
+  
+.logo{
+    padding:5px;
+    text-align: center;
+}
+
+body{
+    margin:0 !important;
+    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  .nav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .nav a:hover {
+    background-color: orangered;
+    color: white;
+  
+  }
+  
+  .nav a.active {
+    background-color: orangered;
+    color: white;
+  }
+
+
+.nav-link{
+    padding: 20px;
+}
+
+
+
+.home-banner{
+    background-image: url('../../assets/maths-bg.jpg');
+    background-attachment: fixed;
+    height: 70vh;
+}
+
+.page-banner{
+    background-image: url('../../assets/page_banner.png');
+    background-attachment: fixed;
+    height: 40vh;
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.267);
+    height:70vh;
+    color:white;
+    text-align: center;
+}
+
+.page-overlay{
+    background-color: rgba(0, 0, 0, 0.514);
+    height:40vh;
+    color:white;
+    text-align: center;
+}
+
+.container{
+    display:flex;
+    padding:30px;
+}
+
+.col{
+    width:100%;
+}
+.align-justify{
+    text-align: justify;
+    font-size: 18px;
+}
+footer{
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding:10px;
+}
+
+
+.active{
+    background-color:orangered !important;
+    color:white  !important;
+}
+
+.padding{
+    padding:20px;
+}
+
+
+th{
+    color:white;
+    padding:15px;
+    background-color:black;
+}
+
+td{
+    padding:5px;
+    border: 1px solid black;
+}
+table{
+    border:1px solid black;
+}
+
+.footer{
+    background-color:black;
+    
+    color:white;
+    text-align: center;
+}
+
+
+.card{
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)!important;
+}
+
+
+input[type="text"],input[type="number"],input[type="date"],textarea{
+    padding:10px;
+    width:94%;
+}
+textarea{
+    width:95%;
+}
+select{
+    width:100%;
+    padding:10px;
+}
+form{
+    padding:20px;
+    line-height: 1.6cm;
+}
+
+
+.button{
+    padding:10px;
+    color:white;
+    background-color: black;
+    border-radius: 5px;
+    border:none;
+}
+.faculty>.col{
+    padding:10px;
+}
+
+.faculty>.col:hover
+{
+    background-color: black;
+    color:white;
+    -webkit-transition: color 1s ease-in; /* Safari */
+          transition: color 1s ease-in;
+    -webkit-transition: background-color 1s ease-in; /* Safari */
+          transition: background-color 1s ease-in;
+}
